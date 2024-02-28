@@ -10,6 +10,8 @@ SET @serverName = CAST(@@SERVERNAME AS NVARCHAR(500))
 
 -- Set the current time
 SET @currentTime = CONVERT(NVARCHAR(20), GETDATE(), 120) -- yyyy-mm-dd hh:mi:ss (24h format)
+---SET @currentTime = CONVERT(NVARCHAR(10), GETDATE(), 101) + ' ' + CONVERT(NVARCHAR(8), GETDATE(), 108) ---american mm-dd-yy and 24hr format
+
 
 -- Set the email subject to include the server name
 SET @subject = 'Server Reboot Completed on ' + @serverName
